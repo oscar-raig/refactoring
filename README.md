@@ -1,16 +1,4 @@
-[![Build Status](https://travis-ci.org/oscar-raig/javatemplate.svg?branch=master)](https://travis-ci.org/oscar-raig/javatemplate)
-[![Coverage Status](https://coveralls.io/repos/oscar-raig/javatemplate/badge.svg?branch=master&service=github)](https://coveralls.io/github/oscar-raig/javatemplate?branch=master)
+#First Chapter Example,from Refactroing from Martin Fowler with test.
 
-# javatemplate
-
-Java Template project with jacoco, checkstyle,mockito and tests.
-
-git clone git@github.com:oscar-raig/javatemplate.git
-
-cd javatemplate
-
-git archive master | tar -x -C /somewhere/else
-
-and ... begin to play
-
-# refactoring
+The exercise is not resolved, but has the initial classes coverd with thest to begin the exercise.
+The classes are Customer, Rental and Movie
