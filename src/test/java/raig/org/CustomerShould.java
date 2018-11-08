@@ -40,6 +40,18 @@ public class CustomerShould {
   }
 
   @Test
+  public void whenMovieIsCreatedAsRegularButLaterChangeItsTypePriceAlsoChange() {
+
+    Movie movie = new Movie("regular",Movie.REGULAR);
+    movie.setPriceCode(Movie.NEW_RELEASE);
+    Rental rental = new Rental(movie,1);
+    customer.addRental(rental);
+    String result = customer.statement();
+    System.out.print(result);
+    assertTrue(result.contains("Amount owed is 3.0"));
+  }
+
+  @Test
   public void whenRegularMovieIsRentedTwoDaysAmountIs2() {
 
     Movie movie = new Movie("regular",Movie.REGULAR);
@@ -134,6 +146,17 @@ public class CustomerShould {
     String result = customer.statement();
     System.out.print(result);
     assertTrue(result.contains("1 frequent"));
+  }
+
+  @Test
+  public void whenRegularMovieIsChangedItsTypeThenFrequentPointAlsoChange() {
+    Movie movie = new Movie("children",Movie.CHILDREN);
+    movie.setPriceCode(Movie.NEW_RELEASE);
+    Rental rental = new Rental(movie,2);
+    customer.addRental(rental);
+    String result = customer.statement();
+    System.out.print(result);
+    assertTrue(result.contains("2 frequent"));
   }
 
   @Test
